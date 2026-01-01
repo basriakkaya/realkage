@@ -13,8 +13,8 @@ description: >-
   Eğitim amaçlıdır; yalnızca yetkili ve izinli ortamlarda uygulanmalıdır.
 
 # GitHub Pages URL
-url: "https://realkage.github.io"
-baseurl: ""
+url: "https://basriakkaya.github.io"
+baseurl: "/realkage"
 
 github:
   username: realkage
