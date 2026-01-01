@@ -1,36 +1,34 @@
-# Import the theme
-theme: jekyll-theme-chirpy
-
 # Site language & timezone
-lang: tr
+lang: en
 timezone: Europe/Skopje
 
-# SEO
+# Branding
 title: realkage
 tagline: CTF Writeups • Bug Bounty Notes • Web Security
 description: >-
-  CTF writeup’larım, bug bounty notlarım ve web güvenliği üzerine teknik içerikler.
-  Eğitim amaçlıdır; yalnızca yetkili ve izinli ortamlarda uygulanmalıdır.
+  Writeups, notes, and practical security research focused on web application security,
+  CTF methodology, and responsible disclosure. For authorized environments only.
 
-# GitHub Pages URL
+# Project Pages
 url: "https://basriakkaya.github.io"
 baseurl: "/realkage"
 
+# Account (GitHub Pages owner)
 github:
-  username: realkage
+  username: basriakkaya
 
+# Social links (footer/side icons)
 social:
   name: realkage
   email: ""
   links:
-    - https://github.com/realkage
+    - https://github.com/basriakkaya
     - https://www.linkedin.com/in/basriakkaya/
     - https://tryhackme.com/p/realkage
     - https://bugcrowd.com/h/realkage
 
-# Avatar (senin dosyan JPG)
+# Avatar
 avatar: /assets/img/avatar.jpg
 
-# Theme mode:
-# Boş bırak → sistem ayarına göre light/dark + toggle aktif
+# Keep empty => system light/dark + toggle
 theme_mode:
