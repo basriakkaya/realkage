@@ -30,5 +30,5 @@ social:
 # Avatar
 avatar: /assets/img/avatar.jpg
 
-# Keep empty => system light/dark + toggle
+# Keep empty 
 theme_mode:
