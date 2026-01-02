@@ -1,23 +1,22 @@
-# Site language & timezone
+theme: jekyll-theme-chirpy
+
 lang: en
 timezone: Europe/Skopje
 
-# Branding
 title: realkage
 tagline: CTF Writeups • Bug Bounty Notes • Web Security
 description: >-
-  Writeups, notes, and practical security research focused on web application security,
-  CTF methodology, and responsible disclosure. For authorized environments only.
+  Practical writeups and security notes focused on web application security,
+  CTF methodology, and responsible disclosure. Educational content for authorized environments only.
 
-# Project Pages
 url: "https://basriakkaya.github.io"
 baseurl: "/realkage"
 
-# Account (GitHub Pages owner)
+avatar: /assets/img/avatar.jpg
+
 github:
   username: basriakkaya
 
-# Social links (footer/side icons)
 social:
   name: realkage
   email: ""
@@ -27,8 +26,50 @@ social:
     - https://tryhackme.com/p/realkage
     - https://bugcrowd.com/h/realkage
 
-# Avatar
-avatar: /assets/img/avatar.jpg
-
-# Keep empty 
 theme_mode:
+
+toc: true
+paginate: 10
+
+collections:
+  tabs:
+    output: true
+    sort_by: order
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      toc: true
+      comments: false
+      permalink: /posts/:title/
+  - scope:
+      path: ""
+      type: tabs
+    values:
+      layout: page
+      permalink: /:title/
+
+jekyll-archives:
+  enabled: [categories, tags]
+  layouts:
+    category: category
+    tag: tag
+  permalinks:
+    category: /categories/:name/
+    tag: /tags/:name/
+
+sass:
+  style: compressed
+
+exclude:
+  - "*.gem"
+  - "*.gemspec"
+  - docs
+  - tools
+  - README.md
+  - LICENSE
+  - "*.config.js"
+  - "package*.json"
