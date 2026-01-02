@@ -1,6 +1,6 @@
 ---
 title: "ByteBreach 2025.2 — Event Hub & Writeups"
-date: 2026-01-02 20:00:00 +0100
+date: 2026-01-02
 categories: [CTF, Event]
 tags: [bytebreach, beyondmachines, writeups]
 ---
