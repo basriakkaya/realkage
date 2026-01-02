@@ -34,6 +34,14 @@ The description explicitly referenced:
 
 This strongly suggests a **known-plaintext OTP / Vigenère-style cipher**, where the “pad” is derived from a known text.
 
+<p align="center">
+  <a href="{{ site.baseurl }}/assets/img/bytebreach/token1.png" class="glightbox" data-gallery="bytebreach-token1">
+    <img src="{{ site.baseurl }}/assets/img/bytebreach/token1.png" alt="ByteBreach Token 01 - Challenge" width="820">
+  </a>
+</p>
+<p align="center"><em>Click to zoom.</em></p>
+
+
 ## Given Data
 
 **Encrypted password**
@@ -80,6 +88,14 @@ print(plain)
 ```text
 HMDSECTCPSUDPTECMC
 ```
+
+<p align="center">
+  <a href="{{ site.baseurl }}/assets/img/bytebreach/token1solved.png" class="glightbox" data-gallery="bytebreach-token1">
+    <img src="{{ site.baseurl }}/assets/img/bytebreach/token1solved.png" alt="ByteBreach Token 01 - Solved" width="820">
+  </a>
+</p>
+<p align="center"><em>Click to zoom.</em></p>
+
 
 ## Result
 
