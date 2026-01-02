@@ -7,13 +7,7 @@ tags: [bytebreach, cryptography, otp, vigenere]
 
 Token 01 writeup from **ByteBreach CTF 2025.2**. This challenge is a classical alphabet-based one-time pad / Vigenère-style decryption using a known plaintext pad. All work was performed in an authorized CTF environment.
 
-<!--more-->
 
-> **Note**
->
-> Images are intentionally not embedded yet.  
-> This keeps GitHub Pages `htmlproofer` checks green until the assets are committed.
-{: .prompt-tip }
 
 ## Challenge Overview
 
@@ -33,12 +27,6 @@ The description explicitly referenced:
 - Translation by **Constance Garnett**
 
 This strongly suggests a **known-plaintext OTP / Vigenère-style cipher**, where the “pad” is derived from a known text.
-
-## Challenge Screenshot
-
-![ByteBreach Token 01 - Challenge]({{ site.baseurl }}/assets/img/bytebreach/token1.png){: width="820" }
-
-*Click to zoom:* open the image in a new tab if your browser blocks inline zoom.
 
 ---
 
@@ -88,10 +76,6 @@ print(plain)
 ```text
 HMDSECTCPSUDPTECMC
 ```
-
-## Solved Screenshot
-
-![ByteBreach Token 01 - Solved]({{ site.baseurl }}/assets/img/bytebreach/token1solved.png){: width="820" }
 
 ---
 
