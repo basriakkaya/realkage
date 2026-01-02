@@ -9,9 +9,11 @@ Token 01 writeup from **ByteBreach CTF 2025.2**. This challenge is a classical a
 
 <!--more-->
 
-> **Info**  
-> This post intentionally avoids embedding images until the assets are uploaded, to keep GitHub Pages `htmlproofer` checks green.
-{: .prompt-info }
+> **Note**
+>
+> Images are intentionally not embedded yet.  
+> This keeps GitHub Pages `htmlproofer` checks green until the assets are committed.
+{: .prompt-tip }
 
 ## Challenge Overview
 
