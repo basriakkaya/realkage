@@ -1,87 +1,61 @@
 ---
-title: "ByteBreach 2025.2 – Token 01: Calibrated Absence"
-date: 2026-01-02 12:00:00 +0100
+title: "ByteBreach 2025.2 — Token 01: Calibrated_Absence"
+date: 2026-01-02 00:00:00 +0100
 categories: [CTF, Cryptography]
 tags: [bytebreach, cryptography, otp, vigenere]
 ---
 
-Token 01 writeup from **ByteBreach CTF 2025.2**, focused on a classical  
-**one-time pad / Vigenère-style cryptography challenge**.
+Token 01 writeup from **ByteBreach CTF 2025.2**. This challenge is a classical alphabet-based one-time pad / Vigenère-style decryption using a known plaintext pad. All work was performed in an authorized CTF environment.
 
-All actions were performed in an **authorized CTF environment**.
+<!--more-->
 
----
+> **Info**  
+> This post intentionally avoids embedding images until the assets are uploaded, to keep GitHub Pages `htmlproofer` checks green.
+{: .prompt-info }
 
 ## Challenge Overview
 
-- **Event:** ByteBreach CTF 2025.2  
-- **Category:** Cryptography  
-- **Status:** Solved  
+- **Event:** ByteBreach CTF 2025.2
+- **Category:** Cryptography
+- **Status:** Solved
 - **Token:** `Calibrated_Absence`
 
-The challenge redirected to a **CryptPad document** containing an  
-**encrypted password** and multiple cryptographic hints.
-
----
-
-## Challenge Screenshot
-
-![ByteBreach Token 1 CryptPad Challenge](/assets/img/token1.png)
-
-*CryptPad page showing the encrypted password and the OTP hint.*
-
----
+The challenge redirected to a **CryptPad document** that contained an **encrypted password** plus hints pointing to a known plaintext pad.
 
 ## Observations and Hints
 
-The challenge description explicitly referenced:
+The description explicitly referenced:
 
-- One-time pad encryption  
-- The first paragraph of *Anna Karenina*  
+- One-time pad encryption
+- The first paragraph of *Anna Karenina*
 - Translation by **Constance Garnett**
 
-These clues strongly indicate a  
-**known-plaintext OTP / Vigenère-style cipher**,  
-where the key is derived from a known literary text.
-
----
+This strongly suggests a **known-plaintext OTP / Vigenère-style cipher**, where the “pad” is derived from a known text.
 
 ## Given Data
 
-### Encrypted Password
-
-```
+**Encrypted password**
+```text
 OMSHCHTOXDCHHTVGMN
 ```
 
-### Known Plaintext (Pad)
-
-```
+**Known plaintext (pad)**
+```text
 HAPPYFAMILIESAREALL
 ```
 
-This string corresponds to the opening line of *Anna Karenina*  
-in the specified English translation.
-
----
-
 ## Decryption Logic
 
-The cipher uses classical alphabet-based arithmetic:
+Alphabet arithmetic:
 
-- Each letter is mapped to a numeric value  
-  (`A = 0, B = 1, ..., Z = 25`)
-- Decryption formula for each position:
+- Map letters to numbers: `A=0, B=1, ..., Z=25`
+- For each position:
 
-```
+```text
 plaintext = (cipher - key) mod 26
 ```
 
-- Modulo **26** ensures the output stays within the English alphabet.
-
-This works because the English alphabet has exactly 26 characters.
-
----
+`26` is used because the English alphabet has 26 letters.
 
 ## Decryption Script (Python)
 
@@ -100,25 +74,20 @@ plain = "".join(
 print(plain)
 ```
 
-### Script Output
-
-```
+**Output**
+```text
 HMDSECTCPSUDPTECMC
 ```
 
----
-
 ## Result
 
+```text
+Token 1: Calibrated_Absence
+Next Token: http://walloftext.codeonion.net
 ```
-Token 01: Calibrated_Absence
-Next Token URL: http://walloftext.codeonion.net
-```
-
----
 
 ## Notes
 
 - Tokens are **case-sensitive**
-- Literary references are common in cryptography challenges
-- Strong fundamentals in classical ciphers save significant time in CTFs
+- Literary references are common in crypto challenges
+- Classic cipher fundamentals save time in CTFs
